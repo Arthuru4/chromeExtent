@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+
+    "name": "Maldives ScreenShot Plugin",
+    "description": "This extension will make a screen of video on maldives Page",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+
+   "background": {
+    "scripts": ["html2canvas.js","popup.js"]
+  },
+
+   "content_scripts": [
+   {
+     "all_frames": true,
+    "matches": [ "http://*/*", "https://*/*", "file://*/*" ],
+     "js": ["html2canvas.js", "contentScript.js"]
+   }
+ ],
+
+ "permissions": [ "http://*/*", "https://*/*", "storage" ]
+}
