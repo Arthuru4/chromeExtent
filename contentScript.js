@@ -6,8 +6,5 @@ document.addEventListener('DOMContentLoaded', function () {
         chrome.runtime.sendMessage({Message: "changeColor"}, function (response) {
 
         });
-        // chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
-        //     chrome.tabs.sendMessage(tabs[0].id, {type: "changeColor"});
-        // });
     })
 });
